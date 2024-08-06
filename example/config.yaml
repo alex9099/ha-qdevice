@@ -1,9 +1,8 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
-name: Example add-on
-version: "1.2.0"
-slug: example
-description: Example add-on
-url: "https://github.com/home-assistant/addons-example/tree/main/example"
+name: Qdevice
+version: "1.0.0"
+slug: qdevice
+description: Corosync-qdevice
 arch:
   - armhf
   - armv7
@@ -11,10 +10,5 @@ arch:
   - amd64
   - i386
 init: false
-map:
-  - share:rw
-options:
-  message: "Hello world..."
-schema:
-  message: "str?"
-image: "ghcr.io/home-assistant/{arch}-addon-example"
+ports:
+  5403/tcp: 5403
